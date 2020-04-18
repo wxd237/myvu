@@ -26,5 +26,7 @@ def get_host_ip():
 
 client.update_ip(get_host_ip(), domains=['wangxidi.xyz'])
 
+client.get_records('wangxidi.xyz', record_type='A')
+
 
 
