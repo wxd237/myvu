@@ -1,6 +1,6 @@
 import urllib.request
 import json
-
+import socket
 ip_addr="114.114.114.114"
 api_url = 'https://api.godaddy.com/v1/domains/wangxidi.xyz/records';
 
