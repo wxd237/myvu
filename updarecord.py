@@ -49,3 +49,6 @@ def update_NS(api_url,ip_addr):
     #原谅我偷懒。官方有400/401/422等错误，这里统一处理了
     except:
         print('错误！')
+      
+      
+update_NS(api_url,ip_addr)
