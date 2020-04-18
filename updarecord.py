@@ -3,6 +3,23 @@ import json
 
 ip_addr="114.114.114.114"
 api_url = 'https://api.godaddy.com/v1/domains/wangxidi.xyz/records';
+
+def get_host_ip():
+    """
+    查询本机ip地址
+    :return:
+    """
+    try:
+        s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+        s.connect(('8.8.8.8',80))
+        ip=s.getsockname()[0]
+    finally:
+        s.close()
+
+    return ip
+
+
+
 def update_NS(api_url,ip_addr):
    
     head = {}
@@ -49,6 +66,8 @@ def update_NS(api_url,ip_addr):
     #原谅我偷懒。官方有400/401/422等错误，这里统一处理了
     except:
         print('错误！')
+
+ip_addr=get_host_ip()
       
       
 update_NS(api_url,ip_addr)
