@@ -1,0 +1,13 @@
+[
+  {
+    "data": "string",
+    "name": "string",
+    "port": 0,
+    "priority": 0,
+    "protocol": "string",
+    "service": "string",
+    "ttl": 0,
+    "type": "A",
+    "weight": 0
+  }
+]
